@@ -1,0 +1,496 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #333;
+    padding: 60px 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.range-screen {
+    background-color: #f5f5f5;
+    width: 1120px;
+    height: auto;
+    min-height: 120px;
+    margin: 0 auto 50px;
+    padding: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 320px;
+}
+
+.field h6 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.drawer {
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.drawer-header {
+    padding: 15px;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+.drawer-header:hover {
+    background-color: #f8f9fa;
+}
+
+.drawer-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 15px;
+}
+
+
+.drawer.active .drawer-content {
+   
+    max-height: 100px;
+    padding: 15px;
+}
+
+.drawer-icon {
+    transition: transform 0.3s ease;
+}
+
+.drawer.active .drawer-icon {
+    transform: rotate(180deg);
+}
+
+input[type="number"] {
+    width: 0%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+input[type="number"]:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.25);
+}
+
+.button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 8px 24px;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #0b5ed7;
+}
+
+        .main-screen {
+            background-color: #f5f5f5;
+            width: 1120px;
+            height: 420px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .scheme-wrapper {
+            padding: 20px 20px;
+            background: url(../img/bg-img.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #ffffff;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .wrapper-details h2 {
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 26.63px;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+
+        .wrapper-details p {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+            text-align: left;
+        }
+
+        .period-date-range h4 {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 16px;
+            text-align: right;
+            text-transform: capitalize;
+            margin-top: 30px;
+        }
+
+        .bottom {
+            display: flex;
+        }
+
+        .reward {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 10px;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        .rewards h4 {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20px;
+            text-align: left;
+            color: #000000;
+            margin-bottom: 5px;
+            text-transform: capitalize;
+        }
+
+        .rewards h6 {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 18px;
+            text-align: left;
+            color: #6B7280;
+        }
+
+        .rewards.active .line-indicator {
+            height: 3px;
+            width: 90%;
+            position: absolute;
+            background-color: #4F46E5;
+            bottom: -10px;
+            border-radius: 2px;
+            margin: 0 auto;
+        }
+
+        .rewards {
+            flex-basis: 33.33%;
+            position: relative;
+        }
+
+        .rewards.active h4 {
+            color: #4F46E5;
+        }
+
+        .bottom-a {
+            border: 2px solid #E5E7EB;
+            width: 438px;
+            margin-right: 30px;
+            padding: 0 0 25px 0;
+        }
+
+        .prod-summary {
+            padding: 10px 10px 5px;
+        }
+
+        .product-detail {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            color: #6B7280;
+            margin-bottom: 15px;
+        }
+
+        .prod-detail-1 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .prod-detail-1 i {
+            color: #6366F133;
+            margin-right: 5px;
+        }
+
+        .prod-detail-1 h6 {
+            color: #6B7280;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 18px;
+            text-align: left;
+            text-transform: capitalize;
+        }
+
+        .product-precentage1 {
+            height: 8px;
+            width: 95%;
+            background-color: #DDDDFC;
+            margin: 0 auto 10px;
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .product-precentage2 {
+            height: 8px;
+            background-color: #6366F1;
+            border-radius: 20px;
+            position: absolute;
+            left: 0;
+        }
+
+        .eligble {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10px;
+        }
+
+        .eligble h4 {
+            font-family: Inter;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 18px;
+            text-align: left;
+        }
+
+        .eligble .amount {
+            color: #6366F1;
+        }
+
+        /* .bottom-top {
+padding-top: 20px;
+} */
+
+        .bottom-top h2 {
+            color: #000000;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 16px;
+            text-align: left;
+            text-transform: capitalize;
+            margin-bottom: 15px;
+        }
+
+        .bottom-top .content-1 {
+            font-family: Inter;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+
+        .bottom-top .content-2 {
+            font-family: Inter;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            text-align: left;
+            color: #6B7280;
+            margin-bottom: 15px;
+        }
+
+        .profile-img {
+            margin-right: 18px;
+        }
+
+        .profile-img img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            opacity: 0px;
+        }
+
+        .bottom-bb {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-detail h6 {
+            font-family: Inter;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            text-align: left;
+        }
+
+        .name {
+            color: #333;
+        }
+
+        .contact {
+            color: #6B7280;
+        }
+
+        .prod-summary {
+            display: none;
+        }
+
+        .prod-summary.active {
+            display: block;
+        }
+
+        input[type="number"] {
+            width: 100px;
+            margin-bottom: 10px;
+            border: 1px solid #E5E7EB;
+            background-color: transparent;
+            padding: 2px 5px;
+            width: 260px;
+            height: 42px;
+            padding: 9px 13px 9px 13px;
+        }
+
+        .field button {
+            background-color: #6366F1;
+            width: 92px;
+            height: 42px;
+            padding: 13px 24px 13px 24px;
+            border-radius: 6px;
+            color: #ffffff;
+            margin-top: 12px;
+            border: none;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .total-Value {
+            font-weight: 600;
+        }
+
+        .prod-summary h6 {
+            color: #6B7280;
+            font-family: Inter;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 18px;
+            text-align: left;
+        }
+
+        .rewardsbtn button {
+            width: 110px;
+            padding: 10px 16px;
+            border-radius: 32px;
+            border: none;
+            display: inline-block;
+            background-color: #383838;
+        }
+
+        .rewardsbtn h4 {
+            font-family: Inter;
+            font-size: 18px;
+            font-weight: 800;
+            line-height: 20px;
+            text-align: center;
+            font-weight: 800;
+            text-align: center;
+        }
+
+        .rewardsbtn .bronze {
+            display: none;
+        }
+
+        .bronze h4 {
+            background: linear-gradient(95.46deg, #D6600B 2.8%, #F58C41 18.14%, #FBCFB0 43.7%, #FBD0B1 67.56%, #F58B40 87.39%, #F58B40 104.89%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .rewardsbtn .Silvar {
+            display: none;
+        }
+
+        .Silvar h4 {
+            background: linear-gradient(95.47deg, #717171 -0.22%, #9E9898 10.66%, #D6D6D6 26.65%, #D6D6D6 78.95%, #9E9E9E 93%, #9B9B9B 97.24%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .rewardsbtn .gold {
+            display: none;
+        }
+
+        .gold h4 {
+            background: linear-gradient(95.47deg, #DA8207 -0.22%, #DD9318 10.66%, #FFCB3C 26.65%, #FFCB3C 78.95%, #E39C1E 93%, #FBC63A 97.24%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .visible {
+            display: block;
+        }
+
+        .eli-r a {
+            color: #6366F1;
+            text-decoration: underline;
+            font-family: Inter;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 18px;
+            text-align: left;
+        }
+
+        .amount.active {
+            display: block;
+        }
+
+        .amount {
+            display: none;
+        }
+
+        .product-precentage1.active {
+            display: block;
+        }
+
+        .product-precentage1 {
+            display: none;
+        }
